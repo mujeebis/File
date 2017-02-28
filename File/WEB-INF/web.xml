@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://java.sun.com/xml/ns/javaee" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+id="WebApp_ID" version="3.0">
+
+  <display-name>File</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+ <servlet>
+	<servlet-name>Login</servlet-name>
+	<servlet-class>control.LoginClass</servlet-class>
+</servlet>	
+
+<servlet>
+	<servlet-name>Register</servlet-name>
+	<servlet-class>control.RegisterClass</servlet-class>
+	
+</servlet>
+<servlet>
+	<servlet-name>UserManagment</servlet-name>
+	<servlet-class>control.UserManageClass</servlet-class>
+	
+</servlet>
+
+<servlet>
+	<servlet-name>Status_Delete</servlet-name>
+	<servlet-class>control.DSClass</servlet-class>
+	
+</servlet>
+
+<servlet>
+	<servlet-name>LogOut</servlet-name>
+	<servlet-class>control.LogOutClass</servlet-class>
+</servlet>
+
+<servlet>
+	<servlet-name>MSGTransfer</servlet-name>
+	<servlet-class>control.MsgTransferClass</servlet-class>
+</servlet>
+
+<servlet>
+	<servlet-name>UserNotifications</servlet-name>
+	<servlet-class>control.UserNotifyClass</servlet-class>
+</servlet>
+
+<servlet>
+	<servlet-name>ASK_KEY</servlet-name>
+	<servlet-class>control.DownloadFromClass</servlet-class>
+</servlet>
+<servlet>
+	<servlet-name>puzzle</servlet-name>
+	<servlet-class>control.PuzzleClass</servlet-class>
+</servlet>
+
+
+
+ <servlet>
+        <servlet-name>fileTransfer</servlet-name>
+        <servlet-class>control.FileTransferClass</servlet-class>
+        <multipart-config>
+        <max-file-size>10485760</max-file-size>
+        <max-request-size>20971520</max-request-size>
+        <file-size-threshold>5242880</file-size-threshold>
+        </multipart-config>
+        
+    </servlet>
+    
+
+
+
+<servlet-mapping>
+	<servlet-name>Login</servlet-name>
+	<url-pattern>/dologin</url-pattern>
+</servlet-mapping>	
+
+<servlet-mapping>
+	<servlet-name>Register</servlet-name>
+	<url-pattern>/doregister</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+	<servlet-name>UserManagment</servlet-name>
+	<url-pattern>/usermanagment</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+	<servlet-name>Status_Delete</servlet-name>
+	<url-pattern>/dl</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+	<servlet-name>LogOut</servlet-name>
+	<url-pattern>/logout</url-pattern>
+</servlet-mapping>
+
+
+ <servlet-mapping>
+        <servlet-name>fileTransfer</servlet-name>
+        <url-pattern>/filetransfer</url-pattern>
+ </servlet-mapping>
+   
+    <servlet-mapping>
+        <servlet-name>MSGTransfer</servlet-name>
+        <url-pattern>/msgtransfer</url-pattern>
+ </servlet-mapping>
+ 
+     <servlet-mapping>
+        <servlet-name>UserNotifications</servlet-name>
+        <url-pattern>/user_notifications</url-pattern>
+ </servlet-mapping>
+ 
+ 
+ <servlet-mapping>
+        <servlet-name>ASK_KEY</servlet-name>
+        <url-pattern>/godownload</url-pattern>
+ </servlet-mapping>
+ 
+  <servlet-mapping>
+        <servlet-name>puzzle</servlet-name>
+        <url-pattern>/puzzle</url-pattern>
+ </servlet-mapping>
+ 
+    
+    
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+</web-app>
